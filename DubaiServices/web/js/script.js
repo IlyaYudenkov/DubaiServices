@@ -32,13 +32,13 @@ langEn = (event) => {
 document.body.addEventListener('click', (event) => { 
     if(event.target.classList.contains('lang__ru')){
     langRu(event);
-    translateRu();
+   /* translateRu();*/
   }
   });
   document.body.addEventListener('click', (event) => { 
     if(event.target.classList.contains('lang__en')){
     langEn(event)
-    translateEn();
+  /*  translateEn();*/
   }
   });
   
@@ -62,3 +62,33 @@ function openCloseSubmenu (event){
   document.querySelector('.blog__box').addEventListener('click', openCloseSubmenu);
   document.querySelector('.about__box').addEventListener('click', openCloseSubmenu);
   document.querySelector('.contact__box').addEventListener('click', openCloseSubmenu);
+
+
+  document.querySelector('.propose__viewAll').addEventListener('mouseover', () => {
+    document.querySelector('.viewAll__info').style.color = '#FCD54C';
+    document.querySelector('.viewAll__arrow').style.borderColor = '#FCD54C';
+  })
+  document.querySelector('.propose__viewAll').addEventListener('mouseout', () => {
+    document.querySelector('.viewAll__info').style.color = '#929292';
+    document.querySelector('.viewAll__arrow').style.borderColor = '#929292';
+})
+
+//footer
+function openCloseSubmenuFooter (event){
+  let mainMenuFooter = event.target.parentNode.parentNode;
+  let subMenuFooter = event.target.parentNode.parentNode.childNodes[3];
+  if(mainMenuFooter.dataset.trigger == 'true'){
+    subMenuFooter.style.display = 'block';
+    mainMenuFooter.dataset.trigger = 'false';
+  }
+  else if(mainMenuFooter.dataset.trigger == 'false'){
+    subMenuFooter.style.display = 'none';
+    mainMenuFooter.dataset.trigger = 'true';
+  }
+}
+if(screen.width < 1919){
+  document.querySelector('.contextMenu__buy').addEventListener('click', openCloseSubmenuFooter)
+  document.querySelector('.contextMenu__services').addEventListener('click', openCloseSubmenuFooter)
+  document.querySelector('.contextMenu__information').addEventListener('click', openCloseSubmenuFooter)
+  document.querySelector('.contextMenu__about').addEventListener('click', openCloseSubmenuFooter)
+}

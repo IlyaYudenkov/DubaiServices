@@ -5,20 +5,20 @@
 
 @font-face {
     font-family: 'Gilroy-bold';
-    src: url(/DubaiServices/web/fonts/Gilroy-Bold.woff2);
+    src: url(/web/fonts/Gilroy-Bold.woff2);
 }
 
 @font-face {
     font-family: 'Gilroy-semibold';
-    src: url(/DubaiServices/web/fonts/Gilroy-Semibold.woff2);
+    src: url(/web/fonts/Gilroy-Semibold.woff2);
 }
 @font-face {
     font-family: 'Gilroy-semiboldItalic';
-    src: url(/DubaiServices/web/fonts/Gilroy-SemiboldItalic.woff2);
+    src: url(/web/fonts/Gilroy-SemiboldItalic.woff2);
 }
 @font-face {
     font-family: 'Gilroy-regular';
-    src: url(/DubaiServices/web/fonts/Gilroy-Regular.woff2);
+    src: url(/web/fonts/Gilroy-Regular.woff2);
 }
 
 :root{
@@ -101,6 +101,15 @@
     }
 
 }
+.arrow2{
+    height: 12px;
+    width: 12px;
+    border: 1px solid #929292;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+
+}
 ._active{
     color: #FCD54C;
 }
@@ -118,7 +127,8 @@ body{
 	&__main {
         width: 288px;
         margin: 0px auto;
-        overflow: hidden;
+        overflow-x: hidden;
+        
 	}
 }
 .header {
@@ -138,7 +148,7 @@ body{
         transform: translate(-50%, 0%);
         width: 345px;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         padding: 0 25px;
     }
 }
@@ -377,7 +387,7 @@ body{
 .rent {
 
     &__picture {
-        background: url(/DubaiServices/web/img/MOBILE/main1.png);
+        background: url(/web/img/MOBILE/main1.png);
         width: 290px;
         height: 191px;
         display: flex;
@@ -431,7 +441,7 @@ body{
     }
 
     &__photo {
-        background: url(/DubaiServices/web/img/MOBILE/main2.jpg) 0 0/100% no-repeat;
+        background: url(/web/img/MOBILE/main2.jpg) 0 0/100% no-repeat;
         width: 288px;
         height: 252px;
         margin: 30px 0 20px 0;
@@ -506,7 +516,7 @@ body{
     &__first {
         width: 290px;
         height: 165px;
-        background: url(/DubaiServices/web/img/MOBILE/main3.jpg) 0 0/100% no-repeat;
+        background: url(/web/img/MOBILE/main3.jpg) 0 0/100% no-repeat;
         margin-bottom: 10px;
     }
 
@@ -519,13 +529,13 @@ body{
     &__photoOne{
         width: 290px;
         height: 165px;
-        background: url(/DubaiServices/web/img/MOBILE/main4.jpg) 0 0/100% no-repeat;
+        background: url(/web/img/MOBILE/main4.jpg) 0 0/100% no-repeat;
         margin-bottom: 10px;
     }
     &__photoTwo{
         width: 290px;
         height: 300px;
-        background: url(/DubaiServices/web/img/MOBILE/main5.jpg) 0 0/100% no-repeat;
+        background: url(/web/img/MOBILE/main5.jpg) 0 0/100% no-repeat;
     }
 }
 
@@ -595,7 +605,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url(/DubaiServices/web/img/MOBILE/contactUs.png);
+        background: url(/web/img/MOBILE/contactUs.png);
         padding: 30px 0 22px 0;
     }
 }
@@ -662,7 +672,6 @@ body{
         margin: 50px 0;
         width: 690px;
         margin-left: 20px;
-        overflow: auto;
     }
 }
 
@@ -701,7 +710,6 @@ body{
 .title {
 
     &__first {
-        
     }
 
     &__second {
@@ -885,7 +893,110 @@ body{
     &__check {
     }
 }
+//propose
+.main {
 
+    &__propose {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 51px;
+    }
+}
+.propose {
+
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__viewAll a{
+        display: flex;
+        width: 135px;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 7px;
+        margin-left: auto;
+    }
+}
+.carts {
+
+    &__one {
+        width: 290px;
+        height: 216px;
+        margin-bottom: 20px;
+        background: url(/web/img/MOBILE/main6.jpg);
+    }
+
+    &__two {
+        width: 290px;
+        height: 216px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #FCD54C;
+        padding: 23px 20px 13px 22px;
+    }
+
+    &__three {
+        width: 290px;
+        height: 216px;
+        margin-bottom: 30px;
+        background: url(/web/img/MOBILE/main7.jpg);
+    }
+}
+.two {
+
+    &__title {
+        line-height: 1.95em;
+        color: #272727;
+    }
+
+    &__subtitle {    
+        margin: 27px 0 23px 0;
+        font-family: 'Work Sans';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.5em;
+        color: #272727;
+    }
+
+    &__link a{
+        width: 115px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        cursor: pointer;
+        &:hover{
+            border-bottom: 1px solid #000000;
+        }
+    }
+}
+.link {
+
+    &__info {
+        font-family: 'Work Sans';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #272727;
+    }
+
+    &__arrow {
+        height: 12px;
+        width: 12px;
+        border: 1px solid #272727;
+        transform: rotate(45deg);
+        border-left: none;
+        border-bottom: none;
+    }
+}
+
+.viewAll{
+    &__info{
+        color: #929292;
+        transition-duration: 0.3s;
+    }
+}
 
 
 

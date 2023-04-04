@@ -63,16 +63,6 @@ function openCloseSubmenu (event){
   document.querySelector('.about__box').addEventListener('click', openCloseSubmenu);
   document.querySelector('.contact__box').addEventListener('click', openCloseSubmenu);
 
-
-  document.querySelector('.propose__viewAll').addEventListener('mouseover', () => {
-    document.querySelector('.viewAll__info').style.color = '#FCD54C';
-    document.querySelector('.viewAll__arrow').style.borderColor = '#FCD54C';
-  })
-  document.querySelector('.propose__viewAll').addEventListener('mouseout', () => {
-    document.querySelector('.viewAll__info').style.color = '#929292';
-    document.querySelector('.viewAll__arrow').style.borderColor = '#929292';
-})
-
 //footer
 function openCloseSubmenuFooter (event){
   let mainMenuFooter = event.target.parentNode.parentNode;

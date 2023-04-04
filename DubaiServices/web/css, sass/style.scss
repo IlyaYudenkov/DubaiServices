@@ -1,25 +1,8 @@
-@import "nullstyle.scss";
-
+@import "nullstyle.css";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Work+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
-
-@font-face {
-    font-family: 'Gilroy-bold';
-    src: url(/web/fonts/Gilroy-Bold.woff2);
-}
-
-@font-face {
-    font-family: 'Gilroy-semibold';
-    src: url(/web/fonts/Gilroy-Semibold.woff2);
-}
-@font-face {
-    font-family: 'Gilroy-semiboldItalic';
-    src: url(/web/fonts/Gilroy-SemiboldItalic.woff2);
-}
-@font-face {
-    font-family: 'Gilroy-regular';
-    src: url(/web/fonts/Gilroy-Regular.woff2);
-}
+@import url(../fonts/Gilroy/stylesheet.css);
+@import "patterns.scss";
 
 :root{
     --line-heigth: 1.2em;
@@ -28,99 +11,65 @@
     scroll-behavior: smooth;
 }
 
-.title1{
-    color: #ffff;
-    font-family: 'Gilroy-bold';
-    font-size: 18px;
-    line-height: var(--line-heigth);
-}
-.title2{
-    display: inline;
-    cursor: pointer;
-    font-family: 'Gilroy-semibold';
-    font-size: 36px;
-    line-height: var(--line-heigth);
-    text-transform: uppercase;
-    color: #FFFFFF;
-    transition-duration: 0.3s;
-    &:hover{
-        color: #FCD54C;
-        transition-duration: 0.3s;
-    }
-}
-.title3{
-    font-family: 'Gilroy-bold';
-    font-size: 24px;
-    line-height: 1.25em;
-    color: #FFFFFF;
-}
-.subtitle1{
-    font-family: 'Work Sans';
-    font-weight: 400;
-    font-size: 10px;
-    line-height: var(--line-heigth);
-    color: #FFFFFF;
-}
-.subtitle2{
-    font-family: 'Work Sans';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.86em;
-    color: #FFFFFF;
-}
-.text{
-    font-family: 'Work Sans';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.5em;
-    color: #929292;
-}
-.text2{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Gilroy-semibold';
-    font-size: 16px;
-    line-height: 1.31em;
-    color: #FFFFFF;
-}
-.submenu {
-    display: none;
-    & a{
-        display: block;
-        margin: 20px 0 20px 22px;
-        font-family: 'Gilroy-semibold';
-        text-decoration: none;
-        font-size: 14px;
-        line-height: var(--line-heigth);
-        color: #FFFFFF;
-        transition-duration: 0.3s;
-        &:hover{
-            color: #FCD54C;
-            transition-duration: 0.3s;
-        }
-    }
-
-}
-.arrow2{
-    height: 12px;
-    width: 12px;
-    border: 1px solid #929292;
-    transform: rotate(45deg);
-    border-left: none;
-    border-bottom: none;
-
-}
-._active{
-    color: #FCD54C;
-}
 body{
     background-color: #272727;
 }
-
+//main
 .main {
 
     &__projects{
         margin-top: 45px;
+    }
+    &__rent {
+        margin: 21px 0 26px 0;
+    }
+    &__quote {
+        width: 290px;
+        height: 345px;
+        padding: 8px 25px 10px 21px;
+        border: 4px solid #FCD54C;
+        color: #FFFFFF;
+        margin-bottom: 50px;
+    }
+    &__gallery {
+        margin-bottom: 50px;
+    }
+    &__numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & div{
+            display: flex;  
+            justify-content: space-between;
+            align-self: center;
+            align-items: flex-start;
+        }
+    }
+    &__challenge {
+        margin: 50px 0;
+    }
+    &__contactUs {
+        width: 100%;
+        height: 199px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(/web/img/MOBILE/contactUs.png);
+        padding: 30px 0 22px 0;
+    }
+    &__table {
+        margin: 50px 0;
+        width: 690px;
+        margin-left: 20px;
+    }
+    &__propose {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 51px;
+    }
+    &__footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 }
 .container {
@@ -233,8 +182,6 @@ body{
     }
 }
 
-
-
 .info{
     &__button {
         cursor: pointer;
@@ -264,7 +211,8 @@ body{
     &__phone {
         margin: 40px 0 40px 0;
         & a{
-            font-family: 'Gilroy-semibold';
+            font-family: 'Gilroy';
+            font-weight: 600;
             text-decoration: none;
             font-size: 16px;
             line-height: var(--line-heigth);
@@ -276,7 +224,8 @@ body{
         display: flex;
         width: 44px;
         justify-content: space-between;
-        font-family: 'Gilroy-semibold';
+        font-family: 'Gilroy';
+        font-weight: 600;
         font-size: 14px;
         line-height: var(--line-heigth);
         text-transform: uppercase;
@@ -371,12 +320,7 @@ body{
 }
 
 //rent
-.main {
 
-    &__rent {
-        margin: 21px 0 26px 0;
-    }
-}
 .container {
 
     &__rent {
@@ -394,9 +338,6 @@ body{
         flex-direction: column;
         justify-content: flex-end;
     }
-
-    &__link {
-    }
 }
 .picture {
 
@@ -409,12 +350,6 @@ body{
     }
 }
 //articles
-.main {
-
-    &__articles {
-        
-    }
-}
 .articles {
 
     &__subtitle {
@@ -450,17 +385,6 @@ body{
 
 //quote
 
-.main {
-
-    &__quote {
-        width: 290px;
-        height: 345px;
-        padding: 8px 25px 10px 21px;
-        border: 4px solid #FCD54C;
-        color: #FFFFFF;
-        margin-bottom: 50px;
-    }
-}
 .quote {
     &__quotes {
         font-family: 'Work Sans';
@@ -472,7 +396,7 @@ body{
 
     &__text {
         transform: translate(0px, -20px);
-        font-family: 'Gilroy-semibold';
+        font-family: 'Gilroy';
         font-weight: 600;
         font-size: 18px;
         line-height: 1.5em;
@@ -491,26 +415,6 @@ body{
 }
 
 //gallery
-.main {
-
-    &__gallery {
-        margin-bottom: 50px;
-    }
-
-    &__numbers {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        & div{
-            display: flex;  
-            justify-content: space-between;
-            align-self: center;
-            align-items: flex-start;
-               
-         
-        }
-    }
-}
 .gallery {
 
     &__first {
@@ -519,11 +423,6 @@ body{
         background: url(/web/img/MOBILE/main3.jpg) 0 0/100% no-repeat;
         margin-bottom: 10px;
     }
-
-    &__second {
-        
-    }
-
 }
 .second{
     &__photoOne{
@@ -573,12 +472,6 @@ body{
 
 //challenge
 
-.main {
-
-    &__challenge {
-        margin: 50px 0;
-    }
-}
 .challenge {
 
 
@@ -596,19 +489,6 @@ body{
 
 //contactUS
 
-.main {
-
-    &__contactUs {
-        width: 100%;
-        height: 199px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: url(/web/img/MOBILE/contactUs.png);
-        padding: 30px 0 22px 0;
-    }
-}
 .contactUs {
 
     &__subtitle {
@@ -621,7 +501,8 @@ body{
     }
 
     &__title {
-        font-family: 'Gilroy-bold';
+        font-family: 'Gilroy';
+        font-weight: bold;
         font-size: 50px;
         line-height: var(--line-heigth);
         text-align: center;
@@ -666,15 +547,6 @@ body{
 }
 
 //table
-.main {
-
-    &__table {
-        margin: 50px 0;
-        width: 690px;
-        margin-left: 20px;
-    }
-}
-
 .table {
 
     &__titles {
@@ -685,7 +557,8 @@ body{
         height: 74px;
         
         & div{
-            font-family: 'Gilroy-regular';
+            font-family: 'Gilroy';
+            font-weight: normal;
             font-size: 16px;
             line-height: 1.62em;
             color: #272727;
@@ -894,14 +767,7 @@ body{
     }
 }
 //propose
-.main {
 
-    &__propose {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 51px;
-    }
-}
 .propose {
 
     &__title {
@@ -914,6 +780,16 @@ body{
         justify-content: space-between;
         margin-right: 7px;
         margin-left: auto;
+        transition-duration: 0.3s;
+        &:hover{
+            .viewAll__info{
+                color: #FCD54C;
+            }
+            .viewAll__arrow{
+                transition-duration: 0.3s;
+                border-color: #FCD54C;
+            }
+        }
     }
 }
 .carts {
@@ -966,7 +842,10 @@ body{
         justify-content: space-between;
         margin-left: auto;
         cursor: pointer;
+        transition-duration: 0.3s;
+        border-bottom: 1px solid transparent;
         &:hover{
+            transition-duration: 0.3s;
             border-bottom: 1px solid #000000;
         }
     }
@@ -999,17 +878,7 @@ body{
 }
 
 
-
-
-
-
 //footer
-
-.main {
-    &__footer {
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-}
 
 .footer {
 
@@ -1053,7 +922,8 @@ body{
 .complex {
 
     &__title {
-        font-family: 'Gilroy-bold';
+        font-family: 'Gilroy';
+        font-weight: bold;
         font-size: 28px;
         line-height: var(--line-heigth);
         color: #FFFFFF;
@@ -1098,7 +968,8 @@ body{
     &__email {
         margin: 13px 0 52px 0;
         & a{
-            font-family: 'Gilroy-regular';
+            font-family: 'Gilroy';
+            font-weight: normal;
             font-size: 18px;
             line-height: 21px;
             color: #E8E8E8;
